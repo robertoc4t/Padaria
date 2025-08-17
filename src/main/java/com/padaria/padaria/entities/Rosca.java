@@ -1,6 +1,5 @@
 package com.padaria.padaria.entities;
 
-
-public class Pao extends Produto {
-
+public class Rosca {
+    
 }
