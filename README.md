@@ -9,3 +9,9 @@ Html
 Css
 
 Spring Boot
+
+#Comandos básicos para usar o projeto.
+
+git clone 
+
+git 
