@@ -12,6 +12,12 @@ Spring Boot
 
 #Comandos básicos para usar o projeto.
 
-git clone 
+git clone https://github.com/robertoc4t/Padaria.git
 
-git 
+git add .
+
+git commit -m ""
+
+git git remote add main https://github.com/robertoc4t/Padaria.git
+
+git push
