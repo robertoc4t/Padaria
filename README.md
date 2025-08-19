@@ -3,7 +3,7 @@ Este projeto tem como objetivo criar uma simulação de sistema de padaria.
 
 # Tecnologias
 Java 21
-![Logo css](./src/resoruce/picture/logo-css.png)
+![Logo css](./resoruce/picture/logo-css.png)
 Html
 
 Css
