@@ -1,4 +1,4 @@
-# Padaria
+# 🥐🥖🫓Padaria
 Este projeto tem como objetivo criar uma simulação de sistema de padaria.
 
 # Tecnologias
@@ -9,6 +9,10 @@ Html
 Css
 
 Spring Boot
+
+# Porta de acesso
+
+Para acessar a API basta entrar na porta padrão http://localhost:8080/ & o painel de cadastro do padero http://localhost:8080/painel/padeiros/novo
 
 #Comandos básicos para usar o projeto.
 
