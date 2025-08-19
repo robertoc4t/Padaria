@@ -2,21 +2,24 @@ package com.padaria.padaria.entities;
 
 import java.util.Date;
 
-public class Produto {
+public class Produto 
+{
     
     private String name;
     private String type;
     private double price;
     private Date fabricationDate;
     
-    public Produto(){
+    public Produto()
+    {
         this.name = null;
         this.type = null;
         this.price = 0.0;
         this.fabricationDate = new Date(null);
     }
 
-    public Produto(String name, String type, double price, Date fabricationDate) {
+    public Produto(String name, String type, double price, Date fabricationDate) 
+    {
         this.name = name;
         this.type = type;
         this.price = price;
@@ -24,40 +27,49 @@ public class Produto {
     }
     
 
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) 
+    {
         this.name = name;
     }
 
-    public String getType() {
+    public String getType() 
+    {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(String type) 
+    {
         this.type = type;
     }
 
-    public double getPrice() {
+    public double getPrice()
+    {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(double price) 
+    {
         this.price = price;
     }
 
-    public Date getFabricationDate() {
+    public Date getFabricationDate() 
+    {
         return fabricationDate;
     }
 
     
-    public void setFabricationDate(Date fabricationDate) {
+    public void setFabricationDate(Date fabricationDate) 
+    {
         this.fabricationDate = fabricationDate;
     }
     
-    public String toString() {
+    public String toString() 
+    {
         return "Pao{" +
                 "name='" + name + '\'' +
                 ", type='" + type + '\'' +
@@ -67,7 +79,8 @@ public class Produto {
     }
 
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(Object other) 
+    {
 
         if (this == other) 
         {
@@ -88,7 +101,8 @@ public class Produto {
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() 
+    {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (type != null ? type.hashCode() : 0);
         long temp = Double.doubleToLongBits(price);
@@ -96,5 +110,6 @@ public class Produto {
         result = 31 * result + (fabricationDate != null ? fabricationDate.hashCode() : 0);
         return result;
     }
+    
 }
 

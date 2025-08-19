@@ -10,8 +10,13 @@ public class PadariaServices {
     List<Produto> produtos = new ArrayList<>();
     List<Padeiro> padeiros = new ArrayList<>();
 
+    public void adicionarProduto(Produto produto) {
+        produtos.add(produto);
+    }
 
-    Padeiro padeiro = new Padeiro();
+    public void adicionarPadeiro(Padeiro padeiro){
+        padeiros.add(padeiro);
+    }
 
     
 }

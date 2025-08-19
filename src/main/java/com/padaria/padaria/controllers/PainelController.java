@@ -7,10 +7,12 @@ import com.padaria.padaria.entities.Message;
 
 
 @RestController
-public class PainelController {
+public class PainelController 
+{
 
     @GetMapping("/painel")
-    public Message painel() {
+    public Message painel() 
+    {
         return new Message("Bem-vindo ao painel da padaria!");
     }
 }
