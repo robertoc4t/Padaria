@@ -6,7 +6,7 @@ public class Estoque
 {
     private ArrayList<Produto> produtos;
     private int quantidade;
-
+// Constructor
     public Estoque() 
     {
         this.produtos = new ArrayList<>();
