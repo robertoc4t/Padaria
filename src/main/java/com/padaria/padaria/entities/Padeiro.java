@@ -1,15 +1,14 @@
 package com.padaria.padaria.entities;
 
+
 public class Padeiro 
 {
-    
     private String name;
     private String specialty;
-    private int experienceYears;
-    private String senha;
+    private int experienceYears;    
+    private String Hash;
+
     
-
-
     public Padeiro() 
     {
         this.name = null;

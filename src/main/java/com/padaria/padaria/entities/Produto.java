@@ -6,6 +6,7 @@ public class Produto
 {
     
     private String name;
+    private String descrition;
     private String type;
     private double price;
     private Date fabricationDate;
@@ -18,9 +19,10 @@ public class Produto
         this.fabricationDate = new Date(null);
     }
 
-    public Produto(String name, String type, double price, Date fabricationDate) 
+    public Produto(String name, String descrition,String type, double price, Date fabricationDate) 
     {
         this.name = name;
+        this.descrition = descrition;
         this.type = type;
         this.price = price;
         this.fabricationDate = fabricationDate;
@@ -68,10 +70,20 @@ public class Produto
         this.fabricationDate = fabricationDate;
     }
     
+    public String getDescrition() 
+    {
+        return descrition;
+    }
+    public void setDescrition(String descrition) 
+    {
+        this.descrition = descrition;
+    }
+    
     public String toString() 
     {
         return "Pao{" +
                 "name='" + name + '\'' +
+                ", descrition='" + descrition + '\'' +
                 ", type='" + type + '\'' +
                 ", price=" + price +
                 ", fabricationDate=" + fabricationDate +

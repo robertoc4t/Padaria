@@ -1,22 +1,15 @@
 package com.padaria.padaria.services;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.stereotype.Service;
 
-import com.padaria.padaria.entities.Padeiro;
-import com.padaria.padaria.entities.Produto;
+import com.padaria.padaria.repository.Estoque;
+import com.padaria.padaria.repository.Funcionarios;
 
-public class PadariaServices {
-    List<Produto> produtos = new ArrayList<>();
-    List<Padeiro> padeiros = new ArrayList<>();
-
-    public void adicionarProduto(Produto produto) {
-        produtos.add(produto);
-    }
-
-    public void adicionarPadeiro(Padeiro padeiro){
-        padeiros.add(padeiro);
-    }
-
+@Service
+public class PadariaServices 
+{
+    
+    Estoque estoque = new Estoque();
+    Funcionarios funcionarios = new Funcionarios();
     
 }
