@@ -1,7 +1,7 @@
 package com.padaria.padaria.entities;
 
 
-public class Padeiro 
+public class Funcionario 
 {
     private String name;
     private String specialty;
@@ -9,13 +9,13 @@ public class Padeiro
     private String Hash;
 
     
-    public Padeiro() 
+    public Funcionario() 
     {
         this.name = null;
         this.specialty = null;
         this.experienceYears = 0;
     }
-    public Padeiro(String name, String specialty, int experienceYears) 
+    public Funcionario(String name, String specialty, int experienceYears) 
     {
         this.name = name;
         this.specialty = specialty;
@@ -69,7 +69,7 @@ public class Padeiro
     public boolean equals(Object o) 
     {
         if (this == o) return true;
-        if (!(o instanceof Padeiro)) return false;
+        if (!(o instanceof Funcionario)) return false;
         return false;
     }
 }

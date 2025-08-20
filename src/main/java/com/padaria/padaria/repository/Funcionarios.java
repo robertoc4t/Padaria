@@ -2,11 +2,11 @@ package com.padaria.padaria.repository;
 // Essa camada de repositorio vai ser responsavel por armazenar os dados da nossa padaria, por hora claro, não trabalhar muito aqui
 import java.util.ArrayList;
 
-import com.padaria.padaria.entities.Padeiro;
+import com.padaria.padaria.entities.Funcionario;
 
 public class Funcionarios {
     
-    private ArrayList<Padeiro> padeiros;
+    private ArrayList<Funcionario> padeiros;
 
 
     public Funcionarios() {
@@ -14,21 +14,21 @@ public class Funcionarios {
     }
 
 
-    public void addPadeiro(Padeiro padeiro) {
+    public void addFuncionario(Funcionario padeiro) {
         this.padeiros.add(padeiro);
     }   
 
-    public ArrayList<Padeiro> listarTodosPadeiros() {
+    public ArrayList<Funcionario> listarTodosPadeiros() {
         return padeiros;
     }
 
-    public void adicionarPadeiro(Padeiro padeiro) 
+    public void adicionarPadeiro(Funcionario padeiro) 
     {
        this.padeiros.add(padeiro);
     }
 
 
-    public String removerPadeiro(Padeiro padeiro) 
+    public String removerPadeiro(Funcionario padeiro) 
     {
         if (this.padeiros.contains(padeiro)) 
         {
@@ -46,7 +46,7 @@ public class Funcionarios {
         {
             return "Nenhum padeiro cadastrado.";
         }
-        for (Padeiro padeiro : this.padeiros) 
+        for (Funcionario padeiro : this.padeiros) 
         {
             listaDePadeiros.append(padeiro.toString());
         }       
