@@ -1,5 +1,5 @@
 package com.padaria.padaria.repository;
-
+// Essa camada de repositorio vai ser responsavel por armazenar os dados da nossa padaria, por hora claro, não trabalhar muito aqui
 import java.util.ArrayList;
 
 import com.padaria.padaria.entities.Produto;
