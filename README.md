@@ -22,6 +22,8 @@ git add .
 
 git commit -m ""
 
+git pull main main --rebase   <-- Esse comando está sendo necessário quando a branch local não está sincronizada com a branch remota
+
 git remote add main (Se caso esteja acessando o cógio em uma nova máquina)
 
 git push main main
