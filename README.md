@@ -26,4 +26,6 @@ git pull main main --rebase   <-- Esse comando está sendo necessário quando a 
 
 git remote add main (Se caso esteja acessando o cógio em uma nova máquina)
 
+git pull main main --rebase
+
 git push main main
