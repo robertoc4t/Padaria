@@ -17,7 +17,7 @@ public class PadariaServices
     {
         Funcionario funcionario = new Funcionario(name, specialty, experienceYears);
         funcionarios.addFuncionario(funcionario);
-        System.out.println("Adicionando padeiro...");
+        System.out.println("Funcionario adicionado: " + funcionario.getName());
     }
     
 }

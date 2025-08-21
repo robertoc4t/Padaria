@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping; // Importe o GetMappi
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.padaria.padaria.DTOs.FuncionarioDTO;
 import com.padaria.padaria.services.PadariaServices;
 
 @Controller
@@ -30,9 +31,9 @@ public class PainelControllerGUI {
     
     // Processa o formulário de login do padeiro e carrega o painel de operações do funcionário
     @PostMapping("/painel/funcionario")
-    public String processarFormularioPadeiro(@RequestBody String nome, String especialidade, int anosExperiencia) 
+    public String processarFormularioPadeiro(@RequestBody FuncionarioDTO funcionario) 
     {
-       padariaService.adicionarFuncionario(nome, especialidade, anosExperiencia);
+       padariaService.adicionarFuncionario(funcionario.nome(), funcionario.especialidade(), funcionario.anosExperiencia());
        return "PainelDeOperacoesFuncionario"; 
     }
 }
