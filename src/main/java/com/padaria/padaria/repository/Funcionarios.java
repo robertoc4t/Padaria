@@ -6,47 +6,47 @@ import com.padaria.padaria.entities.Funcionario;
 
 public class Funcionarios {
     
-    private ArrayList<Funcionario> padeiros;
+    private ArrayList<Funcionario> funcionarios;
 
 
     public Funcionarios() {
-        this.padeiros = new ArrayList<>();
+        this.funcionarios = new ArrayList<>();
     }
 
 
-    public void addFuncionario(Funcionario padeiro) {
-        this.padeiros.add(padeiro);
+    public void addFuncionario(Funcionario funcionario) {
+        this.funcionarios.add(funcionario);
     }   
 
-    public ArrayList<Funcionario> listarTodosPadeiros() {
-        return padeiros;
+    public ArrayList<Funcionario> listarTodofuncionarios() {
+        return this.funcionarios;
     }
 
-    public void adicionarPadeiro(Funcionario padeiro) 
+    public void adicionafuncionario(Funcionario funcionario) 
     {
-       this.padeiros.add(padeiro);
+       this.funcionarios.add(funcionario);
     }
 
 
     public String removerPadeiro(Funcionario padeiro) 
     {
-        if (this.padeiros.contains(padeiro)) 
+        if (this.funcionarios.contains(padeiro)) 
         {
-            this.padeiros.remove(padeiro);
-            return "Padeiro removido com sucesso.";
+            this.funcionarios.remove(padeiro);
+            return "Funcionario removido com sucesso.";
         }
-        return "Padeiro não encontrado.";
+        return "Funcionario não encontrado.";
     }   
 
     
     public String consultarPadeiros() 
     {
         StringBuilder listaDePadeiros = new StringBuilder();
-        if (this.padeiros.isEmpty()) 
+        if (this.funcionarios.isEmpty()) 
         {
             return "Nenhum padeiro cadastrado.";
         }
-        for (Funcionario padeiro : this.padeiros) 
+        for (Funcionario padeiro : this.funcionarios) 
         {
             listaDePadeiros.append(padeiro.toString());
         }       
@@ -57,7 +57,7 @@ public class Funcionarios {
     public String toString() 
     {
         return "Funcionarios{" +
-                "padeiros=" + padeiros +
+                "padeiros=" + funcionarios +
                 '}';
     }   
 
