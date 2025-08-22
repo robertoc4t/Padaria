@@ -40,6 +40,7 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 | **Spring Boot** | <img src="./assets/logo-spring.png" alt="Spring Boot" width="40"> |
 | **HTML5** | <img src="./assets/logo-html.png" alt="HTML5" width="40"> |
 | **CSS3** | <img src="./assets/logo-css.png" alt="CSS3" width="40"> |
+| **MySQL** | <img src="./assets/logo-sql.png" alt="MYSQL" width="40"> |
 
 ---
 
