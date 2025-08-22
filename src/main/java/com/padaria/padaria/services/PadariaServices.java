@@ -27,10 +27,11 @@ public class PadariaServices
         StringBuilder lista = new StringBuilder();
         for(Funcionario f : funcionarios.listarTodofuncionarios())
         {
-            lista.append(f.getName()).append("");
+            lista.append(f.getName()).append(", ");
         }
+        
         System.out.println(lista.toString());
-        return lista.toString();
+        return (lista.length() == 0) ? "Nenhum funcionário cadastrado." : lista.toString(); 
     }
     
 }

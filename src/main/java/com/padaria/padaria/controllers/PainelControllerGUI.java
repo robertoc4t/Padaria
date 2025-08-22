@@ -32,8 +32,8 @@ public class PainelControllerGUI {
     {
         return "FormularioFuncionario"; 
     }
-    
 
+    
     // Exibe o "repository" dos funcionários
     @GetMapping("/painel/funcionario")
     public String exibirPainelFuncionario() 
@@ -41,7 +41,7 @@ public class PainelControllerGUI {
         return padariaService.listarFuncionarios();
     }
 
-    
+
     // Processa o formulário de login do padeiro e carrega o painel de operações do funcionário
     @PostMapping("/painel/funcionario")
     public String processarFormularioPadeiro(@RequestBody FuncionarioDTO funcionario) 
