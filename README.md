@@ -3,7 +3,7 @@ Este projeto tem como objetivo criar uma simulação de sistema de padaria.
 
 # Tecnologias
 
-![Texto alternativo](./assets/logo-java.png)
+![java](./assets/logo-java.png)
 <img src="./assets/logo-java.png" alt="Tela de login da aplicação" width="600">
 Java 21
 
