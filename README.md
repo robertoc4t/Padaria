@@ -5,6 +5,9 @@ Este projeto tem como objetivo criar uma simulação de sistema de padaria.
 
 ![java](./assets/logo-java.png)
 <img src="./assets/logo-java.png" alt="Tela de login da aplicação" width="600">
+<p align="center">
+  <img src="./assets/logo.svg" alt="Logo da Padaria" width="200">
+</p>
 Java 21
 
 Html
