@@ -8,6 +8,9 @@ Este projeto tem como objetivo criar uma simulação de sistema de padaria.
 <p align="center">
   <img src="./assets/logo.svg" alt="Logo da Padaria" width="200">
 </p>
+| Tela Principal | Tela de Cadastro |
+| :---: | :---: |
+| <img src="./assets/tela-principal.png" alt="Tela Principal" width="400"> | <img src="./assets/tela-cadastro.png" alt="Tela de Cadastro" width="400"> |
 Java 21
 
 Html
