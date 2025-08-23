@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 import com.padaria.padaria.entities.Produto;
 
-public class Estoque 
+
+public class Estoque
 {
     private ArrayList<Produto> produtos;
     private int quantidade;
