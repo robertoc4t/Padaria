@@ -8,10 +8,6 @@
   <em>Um sistema de gerenciamento para padarias, construído com as tecnologias mais modernas do ecossistema Java.</em>
 </p>
 
-<p align="center">
-  <img src="./assets/logo-padaria.png" alt="Logo da Padaria" width="200">
-</p>
-
 ---
 
 ## 📋 Índice
