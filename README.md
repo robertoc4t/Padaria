@@ -1,4 +1,4 @@
-# 🥐🥖 Padaria Digital 🫓
+# 🥐 Padaria Digital 🫓
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow" alt="Status do Projeto: Em Desenvolvimento">
