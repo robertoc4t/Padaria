@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.padaria.padaria.DTOs.FuncionarioDTO;
+import com.padaria.padaria.entities.Funcionario;
 import com.padaria.padaria.services.PadariaServices;
 
 @Controller
@@ -33,22 +34,12 @@ public class PainelControllerGUI {
         return "FormularioFuncionario"; 
     }
 
+    @PostMapping("/AdicionarFuncionari")
+    public Funcionario criarFuncionario(@RequestBody FuncionarioDTO funcionarioDtO) {
+                
+        return padariaService.adicionarFuncionario(funcionarioDtO);
+    }   
     
-    // Exibe o "repository" dos funcionários
-    @GetMapping("/painel/funcionario")
-    public String exibirPainelFuncionario() 
-    {
-        return padariaService.listarFuncionarios();
-    }
-
-
-    // Processa o formulário de login do padeiro e carrega o painel de operações do funcionário
-    @PostMapping("/painel/funcionario")
-    public String processarFormularioPadeiro(@RequestBody FuncionarioDTO funcionario) 
-    {
-       padariaService.adicionarFuncionario(funcionario.nome(), funcionario.especialidade(), funcionario.anosExperiencia());
-       return "PainelDeOperacoesFuncionario"; 
-    }
 
 
 }
