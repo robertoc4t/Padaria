@@ -1,3 +1,4 @@
+
 package com.padaria.padaria.DTOs;
 
-public record FuncionarioDTO (String nome, String especialidade, int anosExperiencia) {}
+public record FuncionarioDTO(String name, String specialty, int experienceYears) {}

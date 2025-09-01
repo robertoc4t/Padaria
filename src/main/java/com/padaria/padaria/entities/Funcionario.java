@@ -4,9 +4,11 @@ package com.padaria.padaria.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id; 
+import jakarta.persistence.Id;
+import jakarta.persistence.Table; 
 
 @Entity
+@Table(name = "Funcionarios")
 public class Funcionario 
 {
 
@@ -16,8 +18,8 @@ public class Funcionario
 
     private String name;
     private String specialty;
-    private int experienceYears;    
-    private String Hash;
+    private int experienceYears;  
+    private String hash;
 
     
     public Funcionario() 
