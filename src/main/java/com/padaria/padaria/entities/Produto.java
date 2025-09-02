@@ -16,7 +16,7 @@ public class Produto
         this.name = null;
         this.type = null;
         this.price = 0.0;
-        this.fabricationDate = new Date(null);
+        this.fabricationDate = new Date();
     }
 
     public Produto(String name, String descrition,String type, double price, Date fabricationDate) 

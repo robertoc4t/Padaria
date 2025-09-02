@@ -7,33 +7,42 @@ import org.springframework.stereotype.Service;
 
 import com.padaria.padaria.DTOs.FuncionarioDTO;
 import com.padaria.padaria.entities.Funcionario;
-import com.padaria.padaria.repository.Estoque;
+import com.padaria.padaria.exceptions.FuncionarioNaoEcontradoException;
 import com.padaria.padaria.repository.Funcionarios;
 
 @Service
 public class PadariaServices 
 {
     
-    Estoque estoque = new Estoque();
-    
+
     @Autowired
     private Funcionarios funcionariosRepository;
 
-    public Funcionario adicionarFuncionario(FuncionarioDTO funcionarioDTO) {
+    public Funcionario adicionarFuncionario(FuncionarioDTO funcionarioDTO) 
+    {
     Funcionario funcionario = new Funcionario();
-    
-    // Agora os nomes são os mesmos e a lógica fica clara
-    funcionario.setName(funcionarioDTO.name());
-    funcionario.setExperienceYears(funcionarioDTO.experienceYears());
-    funcionario.setSpecialty(funcionarioDTO.specialty());
-    
-    return this.funcionariosRepository.save(funcionario);
-}
+    funcionario.setName(funcionarioDTO.getName());
+    funcionario.setExperienceYears(funcionarioDTO.getExperienceYears());
+    funcionario.setSpecialty(funcionarioDTO.getSpecialty());
+    this.funcionariosRepository.save(funcionario);
+    return funcionario;
+    }
 
-
-
-    public List<Funcionario> listarFuncionarios() {
-    // Apenas retorne o resultado do findAll() diretamente!
+    public List<Funcionario> listarFuncionarios() 
+    {
     return funcionariosRepository.findAll();
-}
+    }
+
+    public Funcionario atualizarFuncionario(Long id, FuncionarioDTO funcionarioDTO) throws FuncionarioNaoEcontradoException 
+    {
+        Funcionario funcionarioExistente = funcionariosRepository.findById(id)
+        .orElseThrow(() -> new FuncionarioNaoEcontradoException("Funcionário não encontrado"));
+            funcionarioExistente.setName(funcionarioDTO.getName());
+            funcionarioExistente.setExperienceYears(funcionarioDTO.getExperienceYears());
+            funcionarioExistente.setSpecialty(funcionarioDTO.getSpecialty());
+
+            this.funcionariosRepository.save(funcionarioExistente);
+            return funcionarioExistente;
+        
+    }
 }
