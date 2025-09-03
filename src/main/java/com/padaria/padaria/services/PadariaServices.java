@@ -43,6 +43,13 @@ public class PadariaServices
 
             this.funcionariosRepository.save(funcionarioExistente);
             return funcionarioExistente;
-        
+    }
+
+    public Funcionario deletarFuncionario(long id) throws FuncionarioNaoEcontradoException
+    {
+        Funcionario funcionarioDemitido = funcionariosRepository.findById(id)
+        .orElseThrow(() -> new FuncionarioNaoEcontradoException("Funcionario não encontrado para apagar"));
+        this.funcionariosRepository.delete(funcionarioDemitido);
+        return funcionarioDemitido;
     }
 }

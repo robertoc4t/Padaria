@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping; // Importe o GetMapping
 import org.springframework.web.bind.annotation.PutMapping;
@@ -22,14 +23,6 @@ public class PainelControllerGUI {
     @Autowired
     private PadariaServices padariaService;
 
-
-    // Exibe a página inicial de operações do funcionário
-    @GetMapping("")
-    public String inicio() 
-    {
-        return "Inicio"; 
-    }
-
     
     // Exibe o html do painel de login do padeiro
     @GetMapping("/painel/funcionario/novo")
@@ -38,8 +31,8 @@ public class PainelControllerGUI {
         return "formularioPadeiro"; 
     }
 
+
     @GetMapping("/funcionarios") 
-// O método agora retorna uma lista, que será convertida em um array JSON
     public List<Funcionario> listarTodosFuncionarios() 
     { 
         return padariaService.listarFuncionarios();
@@ -57,5 +50,9 @@ public class PainelControllerGUI {
         return padariaService.atualizarFuncionario((long) 1,funcionarioDTO);
     }
 
-
+    @DeleteMapping("/DeletarFuncionario")
+    public Funcionario deletarFuncionario(@RequestBody Long id)
+    {
+        return padariaService.deletarFuncionario(2);
+    }
 }
