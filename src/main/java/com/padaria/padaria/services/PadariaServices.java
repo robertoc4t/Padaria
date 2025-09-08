@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.security.MessageDigest;
 import com.padaria.padaria.DTOs.FuncionarioDTO;
 import com.padaria.padaria.entities.Funcionario;
 import com.padaria.padaria.exceptions.FuncionarioNaoEcontradoException;
@@ -51,5 +51,21 @@ public class PadariaServices
         .orElseThrow(() -> new FuncionarioNaoEcontradoException("Funcionario não encontrado para apagar"));
         this.funcionariosRepository.delete(funcionarioDemitido);
         return funcionarioDemitido;
+    }
+
+    public String gerarHash(String input) 
+    {
+        try
+        {
+            MessageDigest digest =MessageDigest.getInstance("CHA-256");
+            Byte[] hashBytes =digest.digest(input.getBytes());
+            StringBuilder hexString = new StringBuilder();
+            for(byte b : hashBytes)
+            {
+                String hex = Integer.toHexString(0xff & b);
+                if(hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+        }
     }
 }
