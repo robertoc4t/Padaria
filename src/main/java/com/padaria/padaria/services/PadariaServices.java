@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import com.padaria.padaria.DTOs.FuncionarioDTO;
 import com.padaria.padaria.entities.Funcionario;
 import com.padaria.padaria.exceptions.FuncionarioNaoEcontradoException;
@@ -58,14 +60,15 @@ public class PadariaServices
         try
         {
             MessageDigest digest =MessageDigest.getInstance("CHA-256");
-            Byte[] hashBytes =digest.digest(input.getBytes());
-            StringBuilder hexString = new StringBuilder();
-            for(byte b : hashBytes)
-            {
-                String hex = Integer.toHexString(0xff & b);
-                if(hex.length() == 1) hexString.append('0');
-                hexString.append(hex);
+            byte[] hashBytes = digest.digest(input.getBytes());
+
+             StringBuilder hexString = new StringBuilder();
+            for (byte b : hashBytes) {
+                hexString.append(String.format("%02x", b));
             }
+            return hexString.toString();
+        }catch (NoSuchAlgorithmException e) {
+           return e.getMessage();
         }
     }
 }
